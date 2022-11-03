@@ -11,10 +11,15 @@ body {
   width: 80%;
   margin: auto;
   display: flex;
+  margin-top: 0px;
 }
 
 .header {
   border-bottom: 2px solid black;
+  /* position: fixed; */
+  /* background-color: #161618; */
+  width: 100%;
+  display: flex;
 }
 
 .header .container {
@@ -60,6 +65,7 @@ body {
 }
 
 .banner .container {
+  /* margin-top: 90px; */
   height: 400px;
   font-size: 36px;
   justify-content: center;
@@ -101,6 +107,45 @@ body {
   font-size: 13pt;
 }
 
+/* Collabs */
+
+.collab {
+  background-color: #e5e5e5;
+  display: flex;
+}
+
+.collab .container{
+  justify-content: center;
+}
+
+.box img {
+  width: 170px;
+}
+
+.collab .container .boxes {
+  display: flex;
+}
+
+.collab p {
+  text-align: center;
+}
+
+.box {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #161618;
+}
+
+
+.box {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 /* FOOTER */
 
@@ -125,12 +170,12 @@ body {
 /* LOGIN */
 
 .banner .container .card {
-  background-color: #e5e5e5;
+  background-color: #FFEAD4;
   height: fit-content;
   width: 400px;
   display: flex;
   flex-direction: column;
-  color: palevioletred;
+  color: #BF0B2C;
   align-items: center;
   border-radius: 4px;
 }
@@ -192,7 +237,7 @@ button {
 
 input {
   margin-bottom: 10px;
-  border: 2px solid #32b9cd;
+  border: 2px solid #BF0B2C;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
@@ -206,7 +251,7 @@ input {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #BF0B2C;
   width: 120px;
   align-self: center;
   margin-top: 5px;
