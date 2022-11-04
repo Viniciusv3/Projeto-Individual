@@ -89,9 +89,10 @@ body {
 }
 
 /* Sobre o Dunk */
-
+.social{
+  padding-bottom: 30px;
+}
 .social .container .sobre {
-  display: flex;
   width: 100%;
   margin: auto;
   flex-direction: column;
@@ -99,14 +100,22 @@ body {
   color: #FFEAD4;
 }
 .social .container .sobre h2{
-  color: #161618;
+  color: #FFEAD4;
   font-weight: 900;
   font-size: 40pt;
 }
 .social .container .sobre p {
-  font-size: 13pt;
+  font-size: 14pt;
+  width: 40%;
+}
+.tittle{
+  text-align: center;
 }
 
+.social .container .sobre .texto{
+  display: flex ;
+  justify-content: space-around;
+}
 /* Collabs */
 
 .collab {
@@ -119,7 +128,10 @@ body {
 }
 
 .box img {
-  width: 170px;
+  width: 330px;
+  height: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .collab .container .boxes {
@@ -136,11 +148,12 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #161618;
+  border-radius: 10px;
 }
 
 
 .box {
-  margin-top: 50px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,7 +164,7 @@ body {
 
 .footer {
   background-color: #BF0B2C;
-  height: 150px;
+  height: 50px;
   color: #FFEAD4;
   display: flex;
   font-size: 15px;
