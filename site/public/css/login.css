@@ -1,0 +1,112 @@
+/* paleta de cores :
+background #BF0B2C
+textos #FFEAD4
+box #1e1c1d */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #BF0B2C;
+  background-image: url(".././assets/imgs/gif\ dunk\ de\ la\ soul.gif");
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  margin-top: 0px;
+}
+
+.header {
+  border-bottom: 2px solid black;
+  /* position: fixed; */
+  /* background-color: #161618; */
+  width: 100%;
+  display: flex;
+}
+
+.header .container {
+  justify-content: space-between;
+}
+
+.header a {
+  text-decoration: none;
+  color: #FFEAD4;
+}
+
+.agora {
+  font-weight: 800;
+}
+
+.navbar {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: #FFEAD4;
+}
+
+
+.titulo {
+  color: #FFEAD4;
+  width: fit-content;
+  font-weight: 800;
+}
+
+/* LOGIN */
+/* .banner{
+  background-image: url(".././assets/imgs/gif dunk de la soul.gif");
+} */
+.banner .container .card {
+  background-color: #FFEAD4;
+  height: fit-content;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: #BF0B2C;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card h2 {
+  font-size: 30px;
+}
+
+.card h4 {
+  font-size: 16px;
+}
+
+.banner #div_erros_login {
+  margin-top: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #BF0B2C;
+  height: 50px;
+  color: #FFEAD4;
+  display: flex;
+  font-size: 15px;
+}
+
+.footer .container {
+  justify-content: center;
+  text-align: center;
+}
+
+.footer .container .version {
+  font-size: 12px;
+}
