@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palavra cruzada</title>
+    <link rel="stylesheet" href="css/cruzadinha.css">
+    <link rel="icon" href="assets/icon/aaa.png">
+</head>
+
+<body> 
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo"><a href="index.html">DunkLab</a></h1>
+            <ul class="navbar">
+                <li class="agora"> <a href="cruzadinha.html">Cruzadinha</a></li>
+                <li>
+                    <a href="./login.html">Login</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="./index.html">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="all">
+        <div class="all-box">
+            <div class="cruzadinha">
+                <div class="cruzadinha_all">
+                    <div class="dunk">
+                        <input disabled  class="letter" placeholder="1">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                    </div>
+                    <div class="offwhite">
+                        <input disabled  class="letter" placeholder="2">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                    </div>
+                    <div class="benejerrys">
+                        <input disabled  class="letter" placeholder="3">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                    </div>
+                    <div class="jordan">
+                        <input disabled  class="letter" placeholder="4">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                    </div>
+                    <div class="airforce1">
+                        <input disabled  class="letter" placeholder="5">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                    </div>
+                    <div class="low">
+                        <input disabled  class="letter" placeholder="6">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                    </div>
+                    <div class="mid">
+                        <input disabled  class="letter" placeholder="7">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                    </div>
+                    <div class="high">
+                        <input disabled  class="letter" placeholder="8">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                    </div>
+                    <div class="petermoore">
+                        <input disabled  class="letter" placeholder="9">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                    </div>
+                    <div class="bowerman">
+                        <input disabled  class="letter" placeholder="10">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                        <input disabled  class="letter">
+                    </div>
+                </div>
+
+                <div class="container_answers">
+                    <h2>Tente responder!</h2>
+                    <div class="answers">
+                        <input id="ipt_resposta">
+                        <button onclick="validar()">Enviar</button>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+            </div>
+
+            <div class="answers_correct">
+                <h1>DICAS</h1>
+                <p class="tip" id="dica1" ><b>1.</b>Modelo de tênis da Nike lançado no final de 1985.</p>
+                <p class="tip" id="dica2"><b>2.</b>Marca em que Virgil Abloh participou na collab com a nike.</p>
+                <p class="tip" id="dica3"><b>3.</b>Única marca de Sorvete que possui uma collab com a nike.</p>
+                <p class="tip" id="dica4"><b>4.</b>Collab da nike com um dos melhores jogadores da hitória do Basquete.</p>
+                <p class="tip" id="dica5"><b>5.</b>Nasceu como uma edição limitada de tênis de basquete, mas o modelo caiu no gosto da cultura popular, elevando o calçado ao status de clássico.</p>
+                <p class="tip" id="dica6"><b>6.</b>Modelo de nike Dunk que possui o cano baixo.</p>
+                <p class="tip" id="dica7"><b>7.</b>Modelo de nike Dunk que possui o cano médio.</p>
+                <p class="tip" id="dica8"><b>8.</b>Modelo de nike Dunk que possui o cano alto.</p>
+                <p class="tip" id="dica9"><b>9.</b>Criador da silhueta Nike Dunk.</p>
+                <p class="tip" id="dica10"><b>10.</b>Criador da marca de roupas Nike.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <h4>&hearts;Developed by Vinicius Venancio&hearts; <br> SPTech &copy; 2022
+                <br>
+                <span class="version">
+                    v1.0.3
+                </span>
+            </h4>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var itens = [
+    "dunk",
+    "offwhite",
+    "benejerrys",
+    "jordan",
+    "airforce1",
+    "low",
+    "mid",
+    "high",
+    "petermoore",
+    "bowerman",
+  ];
+
+  var teste = false;
+
+  function validar() {
+    var resposta = ipt_resposta.value;
+    if (itens.includes(resposta)) {
+      preencher(resposta);
+    } else {
+      alert("Essa palavra não existe");
+    }
+
+  }
+
+  function preencher(resposta) {
+    var escrita = document.querySelector("." + resposta); //buscando o documento do css com a classe resposta
+    var verify = escrita.querySelectorAll("input"); // busca o input da div e salva na variavel verify que vira um vetor
+    verify.forEach((v, i) => { // preenchimento está dentro de um vetor que finaliza com o index dentro do parametro e vai de 0 até a quantidade do vetor verify
+      v.value = resposta[i]; // input dentro da div que está atribuindo o valor da resposta do indice (i) exemplo [resposta igual =  ram]
+      // exemplo resposta[0] = r , resposta[1] = a, resposta [2] = m
+      v.style.backgroundColor = "rgba(238, 28, 242, 0.725)"; // aqui está alterando a cor do input
+      console.log(v)
+      teste = true
+      ipt_resposta.value = ""
+    });
+  }
+</script>
