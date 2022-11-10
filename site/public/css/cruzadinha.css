@@ -66,7 +66,7 @@ body {
     flex-direction: row;
     width: 1000px;
     height: 1005px;
-    background-color: rgba(255, 234, 212, 0.5);
+    /* background-color: rgba(255, 234, 212, 0.5); */
     background-repeat: no-repeat;
     border-radius: 20px;
 
@@ -74,7 +74,13 @@ body {
 .all-box input{
     text-align: center;
     font-size:15px;
-    color: #FFEAD4;
+    color: #BF0B2C;
+    background-color: #BF0B2C;
+    border: solid 0.5px black;
+    
+}
+::placeholder{
+    color: black;
 }
 .all-box button{
     background: rgba(204, 204, 204, 0.869);
@@ -183,7 +189,8 @@ body {
     grid-column: 9;
 }
 .mid {
-    grid-row: 11;
+    display: flex;
+    grid-row: 10;
     grid-column: 13;
 }
 
