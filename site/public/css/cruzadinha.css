@@ -6,7 +6,7 @@
 body {
     margin: 0;
     background-color: #211D40;
-    background-image: url(../assets/imgs/gifcruzadinha.gif);
+    /* background-image: url(../assets/imgs/gifcruzadinha.gif); */
 }
 
 .container {
@@ -111,9 +111,9 @@ body {
     border-top: 3px solid white;
     border-left: 3px solid white;
 }
-.cruzadinha_all{
-    border-bottom: solid 3px #1e1c1d ;
-}
+/* .cruzadinha_all{
+    /* border-bottom: solid 3px #1e1c1d ; */
+/* } */
 
 .container_answers p {
     padding: 0px 50px;

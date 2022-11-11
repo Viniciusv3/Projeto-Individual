@@ -72,7 +72,6 @@ body {
 }
 
 .banner .container {
-  /* margin-top: 90px; */
   height: 400px;
   font-size: 36px;
   justify-content: center;
@@ -181,6 +180,10 @@ body {
   width: 70%;
 }
 
+.box a{
+  text-decoration: none;
+  color: black;
+}
 
 /* FOOTER */
 
