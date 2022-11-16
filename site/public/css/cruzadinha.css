@@ -6,7 +6,7 @@
 body {
     margin: 0;
     background-color: #211D40;
-    /* background-image: url(../assets/imgs/gifcruzadinha.gif); */
+    /* background-image: url(../assets/imgs/backcruzadinha.png); */
 }
 
 .container {
@@ -75,9 +75,7 @@ body {
     text-align: center;
     font-size:15px;
     color: #BF0B2C;
-    background-color: #BF0B2C;
     border: solid 0.5px black;
-    
 }
 ::placeholder{
     color: black;
@@ -100,6 +98,7 @@ body {
     justify-content: center;
     grid-template-rows: repeat(20, 40px);
     grid-template-columns: repeat(20, 40px);
+    /* background-image: url(../assets/imgs/backcruzadinha.png); */
 }
 
 #ipt_resposta {
@@ -128,21 +127,21 @@ body {
 }
 .answers_correct h1{
     font-size: 30px;
-    color: #FFEAD4;
+    color: black;
     font-weight: 1000;
 }
 .answers_correct {
-    background-color:rgba(191, 11, 44, 0.514);
+    background-color: #BF0B2C;
     width: 700px;
     height: 1005px;
     margin-left: 30px;
     border-radius: 20px;
     padding: 10px 30px;
-}
+}z
 
 .tip {
     font-size: 130%;
-    color: #FFEAD4;
+    color: black;
     font-weight: 500;
 }
 
