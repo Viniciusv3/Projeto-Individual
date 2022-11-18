@@ -59,6 +59,7 @@ body {
     justify-content: center;
     margin-top: 0px;
     padding: 10px;
+    padding-top: 30px;
 }
 
 .all-box {
@@ -96,8 +97,8 @@ body {
 .cruzadinha_all {
     display: grid;
     justify-content: center;
-    grid-template-rows: repeat(20, 40px);
-    grid-template-columns: repeat(20, 40px);
+    grid-template-rows: repeat(17, 40px);
+    grid-template-columns: repeat(18, 40px);
     /* background-image: url(../assets/imgs/backcruzadinha.png); */
 }
 
@@ -131,13 +132,21 @@ body {
     font-weight: 1000;
 }
 .answers_correct {
-    background-color: #BF0B2C;
+    /* background-color: #BF0B2C; */
+    background-image: url(../assets/imgs/backcruzadinha.png);
+    background-size: cover;
     width: 700px;
-    height: 1005px;
-    margin-left: 30px;
+    height: 700px;
+    margin-left: 10px;
     border-radius: 20px;
     padding: 10px 30px;
-}z
+    font-weight: 600;
+    font-size: 11pt;
+    
+}
+.answers_correct p{
+    font-weight: 550;
+}
 
 .tip {
     font-size: 130%;
@@ -159,54 +168,54 @@ body {
 
 .dunk {
     display: flex;
-    grid-row: 10;
+    grid-row: 8;
     grid-column: 7;
 }
 
 .offwhite {
     display: flex;
-    grid-row: 5;
+    grid-row: 3;
     grid-column: 6;
 }
 
 .benejerrys {
-    grid-row: 8;
+    grid-row: 6;
     grid-column: 9;
 }
 
 .jordan {
-    grid-row: 14;
+    grid-row: 12;
     grid-column: 6;
 }
 
 .airforce1 {
-    grid-row: 4;
+    grid-row: 2;
     grid-column: 11;
 }
 .low{
-    grid-row: 3;
+    grid-row: 1;
     grid-column: 9;
 }
 .mid {
     display: flex;
-    grid-row: 10;
+    grid-row: 8;
     grid-column: 13;
 }
 
 .high {
-    grid-row: 5;
+    grid-row: 3;
     grid-column: 10;
 }
 
 .petermoore {
     display: flex;
-    grid-row: 11;
+    grid-row: 9;
     grid-column: 8;
 }
 
 .bowerman {
     display: flex;
-    grid-row: 15;
+    grid-row: 13;
     grid-column: 5;
 }
 
@@ -226,4 +235,10 @@ body {
   
   .footer .container .version {
     font-size: 12px;
+  }
+
+  #dica1, #dica2, #dica3, #dica4, #dica5, #dica6, #dica7, #dica8, #dica9, #dica10{
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    border-radius: 5px;
   }
