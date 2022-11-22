@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid black; */
   /* position: fixed; */
   /* background-color: #161618; */
   width: 100%;
@@ -67,7 +67,7 @@ body {
   background-image: url(".././assets/imgs/banner-dunk.png");
   background-size: cover;
   font-weight: 1000;
-  border-bottom: solid 2px black;
+  /* border-bottom: solid 2px black; */
   height: 450px;
 }
 
@@ -206,9 +206,12 @@ body {
 
 
 /* LOGIN */
-/* .banner{
-  background-image: url(".././assets/imgs/gif dunk de la soul.gif");
-} */
+
+.login .banner{
+  background-image: url(../assets/imgs/banner.jpg);
+  background-size: cover;
+}
+
 .banner .container .card {
   background-color: #FFEAD4;
   height: fit-content;
