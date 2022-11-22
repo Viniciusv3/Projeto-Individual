@@ -126,12 +126,12 @@ body {
     font-size: 25px;
     color: white;
 }
-.answers_correct h1{
+.dicas h1{
     font-size: 30px;
     color: black;
     font-weight: 1000;
 }
-.answers_correct {
+.dicas {
     /* background-color: #BF0B2C; */
     background-image: url(../assets/imgs/backcruzadinha.png);
     background-size: cover;
@@ -144,7 +144,7 @@ body {
     font-size: 11pt;
     
 }
-.answers_correct p{
+.dicas p{
     font-weight: 550;
 }
 

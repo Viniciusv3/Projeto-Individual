@@ -154,7 +154,9 @@ body {
 }
 
 .collab p {
-  text-align: center;
+  text-align: justify;
+  padding: 10px 10px;
+  font-size: 100%;
 }
 
 .collab .container .info .tittle {
