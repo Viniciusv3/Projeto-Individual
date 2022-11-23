@@ -62,7 +62,7 @@ body {
     padding-top: 30px;
 }
 
-.all-box {
+.box {
     display: flex;
     flex-direction: row;
     width: 1000px;
@@ -72,7 +72,7 @@ body {
     border-radius: 20px;
 
 }
-.all-box input{
+.box input{
     text-align: center;
     font-size:15px;
     color: #BF0B2C;
@@ -81,7 +81,7 @@ body {
 ::placeholder{
     color: black;
 }
-.all-box button{
+.box button{
     background: rgba(204, 204, 204, 0.869);
     border-top: white 2px solid;
     border-left: white 2px solid;
@@ -91,10 +91,10 @@ body {
     border-radius:5px;
 }
 
-.cruzadinha_all input{
+.palavras input{
     font-size: 17px;
 }
-.cruzadinha_all {
+.palavras {
     display: grid;
     justify-content: center;
     grid-template-rows: repeat(17, 40px);
@@ -111,16 +111,19 @@ body {
     border-top: 3px solid white;
     border-left: 3px solid white;
 }
-/* .cruzadinha_all{
+/* .palavras{
     /* border-bottom: solid 3px #1e1c1d ; */
 /* } */
+.container_resposta{
+    padding-bottom: 50px;
+}
 
-.container_answers p {
+.container_resposta p {
     padding: 0px 50px;
     text-justify: justify;
 }
 
-.container_answers h2 {
+.container_resposta h2 {
     margin-top: 50px;
     text-align: center;
     font-size: 25px;
@@ -154,7 +157,7 @@ body {
     font-weight: 500;
 }
 
-.answers {
+.resposta {
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -241,4 +244,18 @@ body {
     background-color: rgba(255, 255, 255, 0.7);
     width: 100%;
     border-radius: 5px;
+  }
+
+  .analytics{
+   padding-bottom: 30px; 
+  }
+
+  .analytics .container{
+    justify-content: space-around;
+  }
+  .caixa{
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: aqua;
   }

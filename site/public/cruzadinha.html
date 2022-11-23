@@ -25,9 +25,18 @@
     </div>
 
     <div class="all">
-        <div class="all-box">
+        <div class="box">
             <div class="cruzadinha">
-                <div class="cruzadinha_all">
+                <div class="container_resposta">
+                    <h2>Tente responder!</h2>
+                    <div class="resposta">
+                        <input id="ipt_resposta">
+                        <button onclick="validar()">Enviar</button>
+                        
+                    </div>
+                    
+                </div>
+                <div class="palavras">
                     <div class="dunk">
                         <input disabled  class="letter" placeholder="1">
                         <input disabled  class="letter">
@@ -114,37 +123,43 @@
                         <input disabled  class="letter">
                     </div>
                 </div>
-
-                <div class="container_answers">
-                    <h2>Tente responder!</h2>
-                    <div class="answers">
-                        <input id="ipt_resposta">
-                        <button onclick="validar()">Enviar</button>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-
-
-
-            </div>
-
-            <div class="dicas">
-                <h1>DICAS</h1>
-                <p class="tip" id="dica1" ><b>1.</b>Modelo de tênis da Nike lançado no final de 1985.</p>
-                <p class="tip" id="dica2"><b>2.</b>Marca em que Virgil Abloh participou na collab com a nike.</p>
-                <p class="tip" id="dica3"><b>3.</b>Única marca de Sorvete que possui uma collab com a nike.</p>
-                <p class="tip" id="dica4"><b>4.</b>Collab da nike com um dos melhores jogadores da hitória do Basquete.</p>
-                <p class="tip" id="dica5"><b>5.</b>Nasceu como uma edição limitada de tênis de basquete, mas o modelo caiu no gosto da cultura popular, elevando o calçado ao status de clássico.</p>
-                <p class="tip" id="dica6"><b>6.</b>Modelo de nike Dunk que possui o cano baixo.</p>
-                <p class="tip" id="dica7"><b>7.</b>Modelo de nike Dunk que possui o cano médio.</p>
-                <p class="tip" id="dica8"><b>8.</b>Modelo de nike Dunk que possui o cano alto.</p>
-                <p class="tip" id="dica9"><b>9.</b>Criador da silhueta Nike Dunk.</p>
-                <p class="tip" id="dica10"><b>10.</b>Criador da marca de roupas Nike.</p>
             </div>
         </div>
-    </div>
+        
+        <div class="dicas">
+            <h1>DICAS</h1>
+            <p class="tip" id="dica1" ><b>1.</b>Modelo de tênis da Nike lançado no final de 1985.</p>
+            <p class="tip" id="dica2"><b>2.</b>Marca em que Virgil Abloh participou na collab com a nike.</p>
+            <p class="tip" id="dica3"><b>3.</b>Única marca de Sorvete que possui uma collab com a nike.</p>
+            <p class="tip" id="dica4"><b>4.</b>Collab da nike com um dos melhores jogadores da hitória do Basquete.</p>
+            <p class="tip" id="dica5"><b>5.</b>Nasceu como uma edição limitada de tênis de basquete, mas o modelo caiu no gosto da cultura popular, elevando o calçado ao status de clássico.</p>
+            <p class="tip" id="dica6"><b>6.</b>Modelo de nike Dunk que possui o cano baixo.</p>
+            <p class="tip" id="dica7"><b>7.</b>Modelo de nike Dunk que possui o cano médio.</p>
+            <p class="tip" id="dica8"><b>8.</b>Modelo de nike Dunk que possui o cano alto.</p>
+            <p class="tip" id="dica9"><b>9.</b>Criador da silhueta Nike Dunk.</p>
+            <p class="tip" id="dica10"><b>10.</b>Criador da marca de roupas Nike.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="analytics">
+            <div class="container">
+                <div class="caixa">
+                    <h2>Você acertou:</h2>
+                    <h1 id="num_vit">0</h1>
+                    <h2>palavras</h2>
+                </div>
+                <div class="caixa">
+                    <h2>Você errou:</h2>
+                    <h1 id="num_der">0</h1>
+                    <h2>palavras</h2>
+                </div>
+                <div class="caixa">
+                    <h2>Tentativas:</h2>
+                    <h1 id="num_ten">0</h1>
+                </div>
+            </div>
+        </div>
 
     <div class="footer">
         <div class="container">
