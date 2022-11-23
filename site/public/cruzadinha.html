@@ -15,6 +15,7 @@
         <div class="container">
             <h1 class="titulo"><a href="index.html">DunkLab</a></h1>
             <ul class="navbar">
+                <li> <a href="ranking.html">Ranking</a></li>
                 <li class="agora"> <a href="cruzadinha.html">Cruzadinha</a></li>
                 <li>|</li>
                 <li>
@@ -138,28 +139,28 @@
             <p class="tip" id="dica8"><b>8.</b>Modelo de nike Dunk que possui o cano alto.</p>
             <p class="tip" id="dica9"><b>9.</b>Criador da silhueta Nike Dunk.</p>
             <p class="tip" id="dica10"><b>10.</b>Criador da marca de roupas Nike.</p>
+            <div class="analytics">
+                <div class="container">
+                    <div class="caixa">
+                        <h2>Acertou:</h2>
+                        <h1 id="num_certo">0</h1>
+                        <h2>palavras</h2>
+                    </div>
+                    <div class="caixa">
+                        <h2>Errou:</h2> 
+                        <h1 id="num_erro">0</h1>
+                        <h2>palavras</h2>
+                    </div>
+                    <div class="caixa">
+                        <h2>Tentativas:</h2>
+                        <h1 id="num_ten">0</h1>
+                    </div>
+                </div>
+            </div>
                 </div>
             </div>
         </div>
         
-        <div class="analytics">
-            <div class="container">
-                <div class="caixa">
-                    <h2>Você acertou:</h2>
-                    <h1 id="num_vit">0</h1>
-                    <h2>palavras</h2>
-                </div>
-                <div class="caixa">
-                    <h2>Você errou:</h2>
-                    <h1 id="num_der">0</h1>
-                    <h2>palavras</h2>
-                </div>
-                <div class="caixa">
-                    <h2>Tentativas:</h2>
-                    <h1 id="num_ten">0</h1>
-                </div>
-            </div>
-        </div>
 
     <div class="footer">
         <div class="container">
@@ -189,13 +190,22 @@
   ];
 
   var teste = false;
+  var tentativas = 0;
+  var erros = 0;
+  var acertos = 0;
 
   function validar() {
+    tentativas++
+    num_ten.innerHTML= `${tentativas}`
     var resposta = ipt_resposta.value;
     if (itens.includes(resposta)) {
       preencher(resposta);
+      acertos++
+      num_certo.innerHTML= `${acertos}`
     } else {
+        erros++
       alert("Essa palavra não existe");
+      num_erro.innerHTML= `${erros}`
     }
 
   }

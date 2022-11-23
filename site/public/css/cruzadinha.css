@@ -138,8 +138,8 @@ body {
     /* background-color: #BF0B2C; */
     background-image: url(../assets/imgs/backcruzadinha.png);
     background-size: cover;
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 800px;
     margin-left: 10px;
     border-radius: 20px;
     padding: 10px 30px;
@@ -247,15 +247,20 @@ body {
   }
 
   .analytics{
-   padding-bottom: 30px; 
+    display: flex;
+    justify-content: space-between;
   }
-
   .analytics .container{
-    justify-content: space-around;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
   }
   .caixa{
-    width: 200px;
+    margin: auto;
+    width: 300px;
+    height: 170px;
     text-align: center;
     border-radius: 20px;
-    background-color: aqua;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-right: 15px;
   }
