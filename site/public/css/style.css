@@ -185,13 +185,26 @@ body {
 .box a{
   text-decoration: none;
   color: black;
+  padding: 10px 20px ; 
 }
 
-#acesso{
+.saiba {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFEAD4;
+  border-radius: 10px;
+  height: auto;
+  width: auto;
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+/* #acesso{
   background-color: #FFEAD4;
   border-radius: 3px;
   font-weight: 500;
-}
+} */
 
 /* FOOTER */
 

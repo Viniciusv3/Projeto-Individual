@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #BF0B2C;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-top: 0px;
+  }
+
+  /* HEADER */
+  .header {
+    /* border-bottom: 2px solid black; */
+    /* position: fixed; */
+    /* background-color: #161618; */
+    width: 100%;
+    display: flex;
+  }
+  
+  .header .container {
+    justify-content: space-between;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color: #FFEAD4;
+  }
+  
+  .agora {
+    font-weight: 800;
+  }
+  
+  .navbar {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: #FFEAD4;
+  }
+  
+  
+  .titulo {
+    color: #FFEAD4;
+    width: fit-content;
+    font-weight: 800;
+  }
+
+  /* RANKING */
+  .banner {
+    display: flex;
+  }
+  
+  .banner .container{
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+  }
+  
+  h2{
+    color: #BF0B2C;
+    font-weight: 1000;
+    font-size: 18pt;
+  }
+  
+  .banner p {
+    text-align: justify;
+    font-weight: 700;
+    font-size: 15pt;
+  }
+  
+  .box {
+    width: 600px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    margin-top: 10px;
+    color: #BF0B2C;
+    font-weight: 1000;
+    height: 335px;
+  }
+
+  .box .titulo{
+    color: #BF0B2C;
+    font-size: 15pt;
+  }
+
+  .box .limitacao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .conteudo{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  p{
+    padding: 40px 40px 40px 40px;
+  }
+
+  
+/* FOOTER */
+
+.footer {
+    background-color: #BF0B2C;
+    height: 50px;
+    color: #FFEAD4;
+    display: flex;
+    font-size: 15px;
+  }
+  
+  .footer .container {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer .container .version {
+    font-size: 12px;
+  }
+  
