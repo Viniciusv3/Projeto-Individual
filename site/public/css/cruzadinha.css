@@ -18,7 +18,7 @@ body {
   }
   
   .header {
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
     /* position: fixed; */
     /* background-color: #161618; */
     width: 100%;

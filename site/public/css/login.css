@@ -89,6 +89,7 @@ body {
 }
 
 button {
+  border-left: 1px solid black;
   cursor: pointer;
 }
 
