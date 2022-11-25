@@ -193,8 +193,13 @@
   var tentativas = 0;
   var erros = 0;
   var acertos = 0;
+  var idUsuario = sessionStorage.ID_USUARIO;
 
   function validar() {
+    console.log(tentativas);
+    console.log(erros);
+    console.log(acertos);
+    console.log(idUsuario);
     tentativas++
     num_ten.innerHTML= `${tentativas}`
     var resposta = ipt_resposta.value;
@@ -207,8 +212,40 @@
       alert("Essa palavra não existe");
       num_erro.innerHTML= `${erros}`
     }
+        // aqui
+        var acertosVar = acertos;
+        var errosVar = erros;
+        var tentativasVar = tentativas;
+        var fkUsuarioVar = idUsuario
 
-  }
+        // Enviando o valor da nova input
+        fetch("/cruzadinha/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                acertosServer: acertosVar,
+                errosServer: errosVar,
+                tentativasServer: tentativasVar,
+                fkUsuarioServer: fkUsuarioVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                console.log(`Resposta ok`)
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
+
 
   function preencher(resposta) {
     var escrita = document.querySelector("." + resposta); //buscando o documento do css com a classe resposta
