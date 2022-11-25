@@ -1,5 +1,22 @@
 var database = require("../database/config")
 
+
+function buscarUltimasMedidas() {
+
+    instrucaoSql = ''
+
+    if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `select sum(acertos) as somaAcertos, sum(erros) as somaErros, sum(tentativas) as somaTentativas from cruzadinha;`;
+    } else {
+        console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
+        return
+    }
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+
 function listar() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
@@ -34,4 +51,5 @@ module.exports = {
     entrar,
     cadastrar,
     listar,
+    buscarUltimasMedidas
 };

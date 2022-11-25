@@ -28,18 +28,18 @@
             <div class="titulo">
                 <h1>Ranking</h1></div>
                 <div class="limitacao">
-            <div class="conteudo"><h2>1º Vinicius | Média: <b>0</b></h2></div>
-            <div class="conteudo"><h2>2º Vinicius | Média: <b>0</b></h2></div>
-            <div class="conteudo"><h2>3º Vinicius | Média: <b>0</b></h2></div>
+            <div class="conteudo"><h2 id="ranking1">1º undefined | Média: <b>0</b></h2></div>
+            <div class="conteudo"><h2 id="ranking2">2º undefined | Média: <b>0</b></h2></div>
+            <div class="conteudo"><h2 id="ranking3">3º undefined | Média: <b>0</b></h2></div>
             </div>
         </div>
             <div class="box">
             <div class="titulo">
                 <h1>Global</h1></div>
                 <div class="limitacao">
-            <div class="conteudo"><h2>Acertos: <b>0</b></h2></div>
-            <div class="conteudo"><h2>Erros: <b>0</b></h2></div>
-            <div class="conteudo"><h2>Tentativas: <b>0</b></h2></div>
+            <div class="conteudo"><h2>Acertos: <b id="global_acertos">0</b></h2></div>
+            <div class="conteudo"><h2>Erros: <b id="global_erros">0</b></h2></div>
+            <div class="conteudo"><h2>Tentativas: <b id="global_tentativas">0</b></h2></div>
         </div>
         </div>
         </div>
@@ -58,3 +58,153 @@
     
 </body>
 </html>
+<script>
+        var acertos = 0;
+        var erros = 0;
+        var tentativas = 0;
+        var tentativas1 = 0;
+        var tentativas2 = 0;
+        var tentativas3 = 0;
+        var nome1 = '';
+        var nome2 = '';
+        var nome3 = '';
+
+        fetch(`/medidas/atualizarGlobal`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    acertos = resposta[0].somaAcertos;
+                    erros = resposta[0].somaErros;
+                    tentativas = resposta[0].somaTentativas;
+                    global_acertos.innerHTML= `${acertos}`;
+                    global_erros.innerHTML= `${erros}`;
+                    global_tentativas.innerHTML= `${tentativas}`;
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+
+                // INICIO RANKING
+
+
+
+            fetch(`/medidas/atualizarGlobal1`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    tentativas1 = resposta[0].somaid1;
+                    nome1 = resposta[0].nome;
+
+                    if (tentativas1 == null && nome1 == null){
+                        tentativas1 = 0 
+                        nome1 = 'Vazio'
+                    }
+                    mostrar()
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+            fetch(`/medidas/atualizarGlobal2`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    tentativas2 = resposta[0].somaid2;
+                    nome2 = resposta[0].nome;
+
+                    if (tentativas2 == null && nome2 == null){
+                        tentativas2 = 0 
+                        nome2 = 'Vazio'
+                    }
+                    mostrar()
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+            fetch(`/medidas/atualizarGlobal3`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    tentativas3 = resposta[0].somaid3;
+                    nome3 = resposta[0].nome;
+
+                    if (tentativas3 == null && nome3 == null){
+                        tentativas3 = 0 
+                        nome3 = 'Vazio'
+                    }
+                    mostrar()
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+function mostrar(){
+    if(tentativas1 > tentativas2 && tentativas1 > tentativas3 && tentativas1 != 0 && tentativas1 > 9){
+        ranking1.innerHTML= `1º ${nome1} | Média: <b>${tentativas1}</b>`
+        if(tentativas2 > tentativas3 && tentativas2 != 0 && tentativas2 > 9){
+            ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
+            ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
+        }else if (tentativas3 > tentativas2 && tentativas3 != 0 && tentativas3 > 9){
+            ranking2.innerHTML= `2º ${nome3} | Média: <b>${tentativas3}</b>`
+            ranking3.innerHTML= `3º ${nome2} | Média: <b>${tentativas2}</b>`
+        } else {
+            ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
+            ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
+        }
+    }else if(tentativas2 > tentativas1 && tentativas2 > tentativas3 && tentativas1 != 0 && tentativas2 > 9){
+            ranking1.innerHTML=`1º ${nome2} | Média: <b>${tentativas2}</b>`
+            if(tentativas1 > tentativas3 && tentativas1 != 0 && tentativas1 > 9){
+            ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
+            ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
+        }else if (tentativas3 > tentativas1 && tentativas3 != 0 && tentativas3 > 9){
+            ranking2.innerHTML= `2º ${nome3} | Média: <b>${tentativas3}</b>`
+            ranking3.innerHTML= `3º ${nome1} | Média: <b>${tentativas1}</b>`
+        } else {
+            ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
+            ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
+        }
+    }else if (tentativas3 > tentativas1 && tentativas3 > tentativas2 && tentativas3 != 0  && tentativas3 > 9){
+            ranking1.innerHTML=`1º ${nome3} | Média: <b>${tentativas3}</b>`
+            if(tentativas1 > tentativas2 && tentativas1 != 0 && tentativas1 > 9){
+            ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
+            ranking3.innerHTML= `3º ${nome2} | Média: <b>${tentativas2}</b>`
+        }else if (tentativas2 > tentativas1 && tentativas2 != 0 && tentativas2 > 9){
+            ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
+            ranking3.innerHTML= `3º ${nome1} | Média: <b>${tentativas1}</b>`
+        } else {
+            ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
+            ranking3.innerHTML= `3º ${nome2} | Média: <b>${tentativas2}</b>`
+        }
+    }else {
+
+        nome1 = `Vazio`
+        tentativas1 = 0
+        nome2 = `Vazio`
+        tentativas2 = 0
+        nome3 = `Vazio`
+        tentativas3 = 0
+            ranking1.innerHTML= `1º ${nome1} | Média: <b>${tentativas1}</b>`
+            ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
+            ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`   
+    }
+}
+</script>

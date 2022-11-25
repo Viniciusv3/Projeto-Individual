@@ -3,6 +3,10 @@ var router = express.Router();
 
 var cruzadinhaController = require("../controllers/cruzadinhaController");
 
+router.get("/ultimas", function (req, res) {
+    medidaController.buscarUltimasMedidas(req, res);
+});
+
 router.get("/", function (req, res) {
     cruzadinhaController.testar(req, res);
 });

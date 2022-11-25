@@ -193,6 +193,9 @@
   var tentativas = 0;
   var erros = 0;
   var acertos = 0;
+  var tentativas1 = 0;
+  var erros1 = 0;
+  var acertos1 = 0;
   var idUsuario = sessionStorage.ID_USUARIO;
 
   function validar() {
@@ -200,17 +203,22 @@
     console.log(erros);
     console.log(acertos);
     console.log(idUsuario);
-    tentativas++
-    num_ten.innerHTML= `${tentativas}`
+    tentativas= 1
+    tentativas1++
+    num_ten.innerHTML= `${tentativas1}`
     var resposta = ipt_resposta.value;
     if (itens.includes(resposta)) {
       preencher(resposta);
-      acertos++
-      num_certo.innerHTML= `${acertos}`
+      acertos1++
+      acertos = 1 
+      erros = 0
+      num_certo.innerHTML= `${acertos1}`
     } else {
-        erros++
+        erros1++
+        acertos = 0
+        erros = 1
       alert("Essa palavra não existe");
-      num_erro.innerHTML= `${erros}`
+      num_erro.innerHTML= `${erros1}`
     }
         // aqui
         var acertosVar = acertos;
