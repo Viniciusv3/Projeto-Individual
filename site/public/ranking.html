@@ -157,54 +157,102 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
 
-function mostrar(){
-    if(tentativas1 > tentativas2 && tentativas1 > tentativas3 && tentativas1 != 0 && tentativas1 > 9){
-        ranking1.innerHTML= `1º ${nome1} | Média: <b>${tentativas1}</b>`
-        if(tentativas2 > tentativas3 && tentativas2 != 0 && tentativas2 > 9){
-            ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
-            ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
-        }else if (tentativas3 > tentativas2 && tentativas3 != 0 && tentativas3 > 9){
-            ranking2.innerHTML= `2º ${nome3} | Média: <b>${tentativas3}</b>`
-            ranking3.innerHTML= `3º ${nome2} | Média: <b>${tentativas2}</b>`
-        } else {
-            ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
-            ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
-        }
-    }else if(tentativas2 > tentativas1 && tentativas2 > tentativas3 && tentativas1 != 0 && tentativas2 > 9){
-            ranking1.innerHTML=`1º ${nome2} | Média: <b>${tentativas2}</b>`
-            if(tentativas1 > tentativas3 && tentativas1 != 0 && tentativas1 > 9){
-            ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
-            ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
-        }else if (tentativas3 > tentativas1 && tentativas3 != 0 && tentativas3 > 9){
-            ranking2.innerHTML= `2º ${nome3} | Média: <b>${tentativas3}</b>`
-            ranking3.innerHTML= `3º ${nome1} | Média: <b>${tentativas1}</b>`
-        } else {
-            ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
-            ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
-        }
-    }else if (tentativas3 > tentativas1 && tentativas3 > tentativas2 && tentativas3 != 0  && tentativas3 > 9){
-            ranking1.innerHTML=`1º ${nome3} | Média: <b>${tentativas3}</b>`
-            if(tentativas1 > tentativas2 && tentativas1 != 0 && tentativas1 > 9){
-            ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
-            ranking3.innerHTML= `3º ${nome2} | Média: <b>${tentativas2}</b>`
-        }else if (tentativas2 > tentativas1 && tentativas2 != 0 && tentativas2 > 9){
-            ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
-            ranking3.innerHTML= `3º ${nome1} | Média: <b>${tentativas1}</b>`
-        } else {
-            ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
-            ranking3.innerHTML= `3º ${nome2} | Média: <b>${tentativas2}</b>`
-        }
-    }else {
+            function mostrar() {
+                let teste = true;
+                if (tentativas3 > tentativas1 && tentativas3 > tentativas2 && tentativas3 != 0){
+                    ranking1.innerHTML = `1º ${nome3} | Tentativas: <b>${tentativas3}</b>`
+                    if(tentativas1 > tentativas2 && tentativas1 != 0){
+                        ranking2.innerHTML = `2º ${nome1} | Tentativas: <b>${tentativas1}</b>`
+                        ranking3.innerHTML = `3º ${nome2} | Tentativas: <b>${tentativas2}</b>`
+                    }else {
+                        ranking2.innerHTML = `2º ${nome2} | Tentativas: <b>${tentativas2}</b>`
+                        ranking3.innerHTML = `3º ${nome1} | Tentativas: <b>${tentativas1}</b>`
+                    }
+                    teste = false
+                }
+                if (tentativas2 > tentativas1 && tentativas2 > tentativas3 && tentativas2 != 0){
+                    ranking1.innerHTML = `1º ${nome2} | Tentativas: <b>${tentativas2}</b>`
+                    if(tentativas3 > tentativas1 && tentativas3 != 0){
+                        ranking2.innerHTML = `2º ${nome3} | Tentativas: <b>${tentativas3}</b>`
+                        ranking3.innerHTML = `3º ${nome1} | Tentativas: <b>${tentativas1}</b>`
+                    }else {
+                        ranking2.innerHTML = `2º ${nome1} | Tentativas: <b>${tentativas1}</b>`
+                        ranking3.innerHTML = `3º ${nome3} | Tentativas: <b>${tentativas3}</b>`
+                    }
+                    teste = false 
+                }
+                if(tentativas1 > tentativas2 && tentativas1 > tentativas3 && tentativas1 != 0)
+                ranking1.innerHTML = `1º ${nome1} | Tentativas: <b>${tentativas1}</b>`
+                if(tentativas2 > tentativas3 && tentativas2 != 0){
+                    ranking2.innerHTML = `2º ${nome2} | Tentativas: <b>${tentativas2}</b>`
+                    ranking3.innerHTML = `3º ${nome3} | Tentativas: <b>${tentativas3}</b>`
+                }else {
+                    ranking2.innerHTML = `2º ${nome3} | Tentativas: <b>${tentativas3}</b>`
+                    ranking3.innerHTML = `3º ${nome2} | Tentativas: <b>${tentativas2}</b>`
+                }
+                teste = false
+                if(teste == true){
+                        nome1 = `Vazio`
+                        tentativas1 = 0
+                        nome2 = `Vazio`
+                        tentativas2 = 0
+                        nome3 = `Vazio`
+                        tentativas3 = 0
+                ranking1.innerHTML= `1º ${nome1} | Média: <b>${tentativas1}</b>`
+                ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
+                ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`   
 
-        nome1 = `Vazio`
-        tentativas1 = 0
-        nome2 = `Vazio`
-        tentativas2 = 0
-        nome3 = `Vazio`
-        tentativas3 = 0
-            ranking1.innerHTML= `1º ${nome1} | Média: <b>${tentativas1}</b>`
-            ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
-            ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`   
-    }
-}
+                }
+            }
+
+// function mostrar(){
+//     if(tentativas1 > tentativas2 && tentativas1 > tentativas3 && tentativas1 != 0 && tentativas1 > 9){
+//         ranking1.innerHTML= `1º ${nome1} | Média: <b>${tentativas1}</b>`
+//         if(tentativas2 > tentativas3 && tentativas2 != 0 && tentativas2 > 9){
+//             ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
+//             ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
+//         }else if (tentativas3 > tentativas2 && tentativas3 != 0 && tentativas3 > 9){
+//             ranking2.innerHTML= `2º ${nome3} | Média: <b>${tentativas3}</b>`
+//             ranking3.innerHTML= `3º ${nome2} | Média: <b>${tentativas2}</b>`
+//         } else {
+//             ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
+//             ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
+//         }
+//     }else if(tentativas2 > tentativas1 && tentativas2 > tentativas3 && tentativas1 != 0 && tentativas2 > 9){
+//             ranking1.innerHTML=`1º ${nome2} | Média: <b>${tentativas2}</b>`
+//             if(tentativas1 > tentativas3 && tentativas1 != 0 && tentativas1 > 9){
+//             ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
+//             ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
+//         }else if (tentativas3 > tentativas1 && tentativas3 != 0 && tentativas3 > 9){
+//             ranking2.innerHTML= `2º ${nome3} | Média: <b>${tentativas3}</b>`
+//             ranking3.innerHTML= `3º ${nome1} | Média: <b>${tentativas1}</b>`
+//         } else {
+//             ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
+//             ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`
+//         }
+//     }else if (tentativas3 > tentativas1 && tentativas3 > tentativas2 && tentativas3 != 0  && tentativas3 > 9){
+//             ranking1.innerHTML=`1º ${nome3} | Média: <b>${tentativas3}</b>`
+//             if(tentativas1 > tentativas2 && tentativas1 != 0 && tentativas1 > 9){
+//             ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
+//             ranking3.innerHTML= `3º ${nome2} | Média: <b>${tentativas2}</b>`
+//         }else if (tentativas2 > tentativas1 && tentativas2 != 0 && tentativas2 > 9){
+//             ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
+//             ranking3.innerHTML= `3º ${nome1} | Média: <b>${tentativas1}</b>`
+//         } else {
+//             ranking2.innerHTML= `2º ${nome1} | Média: <b>${tentativas1}</b>`
+//             ranking3.innerHTML= `3º ${nome2} | Média: <b>${tentativas2}</b>`
+//         }
+//     }else {
+
+//         nome1 = `Vazio`
+//         tentativas1 = 0
+//         nome2 = `Vazio`
+//         tentativas2 = 0
+//         nome3 = `Vazio`
+//         tentativas3 = 0
+//             ranking1.innerHTML= `1º ${nome1} | Média: <b>${tentativas1}</b>`
+//             ranking2.innerHTML= `2º ${nome2} | Média: <b>${tentativas2}</b>`
+//             ranking3.innerHTML= `3º ${nome3} | Média: <b>${tentativas3}</b>`   
+//     }
+// }
 </script>
