@@ -107,7 +107,7 @@
 <script>
     function cadastrar() {
         aguardar();
-
+        var teste = true;
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
@@ -116,13 +116,24 @@
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
+            alert(`Preencha todos os campos.`)
             finalizarAguardar();
             return false;
+            teste = false;
         }
-        else {
+        if (senha_input.value != confirmacao_senha_input.value ){
+            alert(`A senhas devem ser iguais.`)
+            finalizarAguardar();
+            return false;
+            teste = false;
+        }
+        if( senha_input.value.length < 8){
+            alert(`É necessário uma senha com no mínimo 8 (oito) caracteres.`)
+            finalizarAguardar();
+            return false;
+            teste = false;
+        }
+        if (teste == true){
             setInterval(sumirMensagem, 5000)
         }
 
@@ -146,7 +157,7 @@
             if (resposta.ok) {
                 cardErro.style.display = "block";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso!";
 
                 setTimeout(() => {
                     window.location = "login.html";
