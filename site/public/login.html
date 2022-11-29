@@ -101,7 +101,7 @@
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
-        if (emailVar == "" || senhaVar == "") {
+        if (emailVar.trim() == "" || senhaVar.trim() == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "Preencha todos os campos.";
             finalizarAguardar();

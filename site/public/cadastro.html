@@ -115,7 +115,7 @@
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar.trim() == "" || emailVar.trim() == "" || senhaVar.trim() == "" || confirmacaoSenhaVar.trim() == "") {
             alert(`Preencha todos os campos.`)
             finalizarAguardar();
             return false;
