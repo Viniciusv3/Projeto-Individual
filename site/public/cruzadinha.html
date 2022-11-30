@@ -186,7 +186,7 @@
     "mid",
     "high",
     "petermoore",
-    "bowerman",
+    "bowerman"
   ];
 
   var teste = false;
@@ -212,6 +212,7 @@
       acertos1++
       acertos = 1 
       erros = 0
+      console.log(acertos1)
       num_certo.innerHTML= `${acertos1}`
     } else {
         erros1++
@@ -254,32 +255,33 @@
         });
     }
 
-    function preencher(resposta) {
-        var escrita = document.querySelector("." + resposta);
-        var verify = escrita.querySelectorAll("input");
+    // function preencher(resposta) {
+    //     var escrita = document.querySelector("." + resposta);//buscando o documento do css com a classe resposta
+    //     var verify = escrita.querySelectorAll("input"); // busca o input da div e salva na variavel verify que vira um vetor
         
-        var vLeng = verify.length;
+    // //     var vLeng = verify.length;
+    //     var v = ''
+        
+    //     for (var index = 0; index <= verify.length; index++) {
+    //         v = verify[index]
+    //         console.log(resposta)
+    //         v.value = resposta[index];
+    //         v.style.backgroundColor = "rgb(255, 234, 212)";
+    //         teste = true
+    //         ipt_resposta.value = ""
+    //     }
+    // }
 
-        for (var index = 0; index <= vLeng; index++) {
-            v = verify[index]
-            v.value = resposta[index];
-            v.style.backgroundColor = "rgb(255, 234, 212)";
-            console.log(v)
-            teste = true
-            ipt_resposta.value = ""
-        }
-    }
-
-//   function preencher(resposta) {
-//     var escrita = document.querySelector("." + resposta); //buscando o documento do css com a classe resposta
-//     var verify = escrita.querySelectorAll("input"); // busca o input da div e salva na variavel verify que vira um vetor
-//     verify.forEach((v, i) => { // preenchimento está dentro de um vetor que finaliza com o index dentro do parametro e vai de 0 até a quantidade do vetor verify
-//       v.value = resposta[i]; // input dentro da div que está atribuindo o valor da resposta do indice (i) exemplo [resposta igual =  ram]
-//       // exemplo resposta[0] = r , resposta[1] = a, resposta [2] = m
-//       v.style.backgroundColor = "rgb(255, 234, 212)"; // aqui está alterando a cor do input
-//       console.log(v.value)
-//       teste = true
-//       ipt_resposta.value = ""
-//     });
-//   }
+  function preencher(resposta) {
+    var escrita = document.querySelector("." + resposta); //buscando o documento do css com a classe resposta
+    var verify = escrita.querySelectorAll("input"); // busca o input da div e salva na variavel verify que vira um vetor
+    verify.forEach((v, i) => { // preenchimento está dentro de um vetor que finaliza com o index dentro do parametro e vai de 0 até a quantidade do vetor verify
+      v.value = resposta[i]; // input dentro da div que está atribuindo o valor da resposta do indice (i) exemplo [resposta igual =  ram]
+      // exemplo resposta[0] = r , resposta[1] = a, resposta [2] = m
+      v.style.backgroundColor = "rgb(255, 234, 212)"; // aqui está alterando a cor do input
+      console.log(v.value)
+      teste = true
+      ipt_resposta.value = ""
+    });
+  }
 </script>
