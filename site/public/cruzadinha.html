@@ -255,22 +255,22 @@
         });
     }
 
-    // function preencher(resposta) {
-    //     var escrita = document.querySelector("." + resposta);//buscando o documento do css com a classe resposta
-    //     var verify = escrita.querySelectorAll("input"); // busca o input da div e salva na variavel verify que vira um vetor
+    function preencher(resposta) {
+        var escrita = document.querySelector("." + resposta);//buscando o documento do css com a classe resposta
+        var verify = escrita.querySelectorAll("input"); // busca o input da div e salva na variavel verify que vira um vetor
         
-    // //     var vLeng = verify.length;
-    //     var v = ''
+    //     var vLeng = verify.length;
+        var v = ''
         
-    //     for (var index = 0; index <= verify.length; index++) {
-    //         v = verify[index]
-    //         console.log(resposta)
-    //         v.value = resposta[index];
-    //         v.style.backgroundColor = "rgb(255, 234, 212)";
-    //         teste = true
-    //         ipt_resposta.value = ""
-    //     }
-    // }
+        for (var index = 0; index <= verify.length; index++) {
+            v = verify[index]
+            console.log(resposta)
+            v.value = resposta[index];
+            v.style.backgroundColor = "rgb(255, 234, 212)";
+            teste = true
+            ipt_resposta.value = ""
+        }
+    }
 
   function preencher(resposta) {
     var escrita = document.querySelector("." + resposta); //buscando o documento do css com a classe resposta
