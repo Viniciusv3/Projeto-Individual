@@ -67,7 +67,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 1000px;
-    height: 1005px;
+    height: 850px;
     /* background-color: rgba(255, 234, 212, 0.5); */
     background-repeat: no-repeat;
     border-radius: 20px;
@@ -94,6 +94,15 @@ body {
 
 .palavras input{
     font-size: 17px;
+    color: rgb(178, 133, 236);
+}
+
+.cruzadinha{
+    /* background-image: url(https://i.pinimg.com/originals/03/44/cb/0344cb4f59bbfda1248d60f23395748b.jpg); */
+    /* background-image: url(https://preview.redd.it/ubs8h434rh951.jpg?width=640&crop=smart&auto=webp&s=95ba4e827db8b5344c24e7bcee4bbbb5bd7cb098); */
+    background-image: linear-gradient(#ffd4e4 , #BF0B2C);
+    background-size: cover;
+    border-radius: 30px;
 }
 .palavras {
     display: grid;
@@ -120,15 +129,14 @@ body {
 }
 
 .container_resposta p {
-    padding: 0px 50px;
     text-justify: justify;
 }
 
 .container_resposta h2 {
-    margin-top: 50px;
+    margin-top: 10px;
     text-align: center;
     font-size: 25px;
-    color: white;
+    color: black;
 }
 .dicas h1{
     font-size: 30px;
@@ -140,9 +148,9 @@ body {
     background-image: url(../assets/imgs/backcruzadinha.png);
     background-size: cover;
     width: 600px;
-    height: 800px;
+    height: 850px;
     margin-left: 10px;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 10px 30px;
     font-weight: 600;
     font-size: 11pt;
